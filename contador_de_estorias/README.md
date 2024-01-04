@@ -9,7 +9,7 @@ Este script Python combina o poder da linguagem OpenAI e dos modelos de geraçã
 
 ## Uso
 
-1. Execute o script executando `python story_maker.py` em seu terminal.
+1. Execute o script executando `python contador_de_estorias.py` em seu terminal.
 2. Insira o título e a premissa desejados para sua história de fantasia quando solicitado.
 3. O script criará diretórios, gerará uma história, limpará o texto e o dividirá em cenas.
 4. Para cada cena, ele gera um prompt, solicita uma imagem gerada por IA e baixa/salva a imagem.
