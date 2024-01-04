@@ -3,24 +3,24 @@ from random import randint
 import os
 import requests
 
-# Function to generate audio narration using OpenAI API
+# Gera narração de áudi
 def narration(client, titulo, story):
     try:
-        # Use the OpenAI Audio API to create speech from the provided story
+        # chama a API para gerar um áudio a partir da estória
         response = client.audio.speech.create(
             model="tts-1",
             voice="shimmer",
             input=story
         )
         
-        # Save the generated audio file to a specific location
+        # Salva o áudio em um arquivo mp3
         response.stream_to_file(f".\\estoria\\{titulo}\\{titulo}.mp3")
         
-        # Return 1 to indicate success
+        # Retorna 1 indicando sucesso
         return 1
     
     except Exception as e:
-        # If an exception occurs during the process, return the error message as a string
+        # Retorna a mensagem de erro
         return str(e)
 
 # Function to append a string to a file
