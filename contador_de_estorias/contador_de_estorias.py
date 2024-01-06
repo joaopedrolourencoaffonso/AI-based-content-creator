@@ -140,7 +140,7 @@ def main():
     exit();
 
   # Divide a história em cenas
-  story = story.split("\\n\\n");
+  story = story.split("\n\n");
 
   i = 0;
   for scene in story:
