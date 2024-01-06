@@ -71,14 +71,10 @@ def prompt_generator(client, scene):
   except Exception as e:
     return str(e);
 
-# 'Limpa' a string recebida da API
-def cleaner(titulo):
+# Lê o arquivo com a estória
+def reader(titulo):
   try:
     story = open(f".\\estoria\\{titulo}\\{titulo}.txt","r").read();
-
-    story = story.replace('ChatCompletionMessage(content="',"")
-    story = story.replace('", role=',"");
-    story = story.replace("assistant', function_call=None, tool_calls=None)","");
 
     return story, 1;
 
@@ -99,7 +95,7 @@ def story_creator(client, premissa, titulo):
     filepath = os.path.join('.\\estoria', titulo, titulo + ".txt")
     
     f = open(filepath, "w")
-    f.write(str(completion.choices[0].message))
+    f.write(str(completion.choices[0].message.content))
     f.close()
 
     return 1
@@ -137,7 +133,7 @@ def main():
     exit();
 
   # 'Limpa' o texto da estória
-  story, retorno = cleaner(titulo);
+  story, retorno = reader(titulo);
   
   if retorno != 1:
     print(retorno)
