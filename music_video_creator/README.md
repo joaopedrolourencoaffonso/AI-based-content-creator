@@ -1,6 +1,6 @@
 # Gerador de vídeo de Música com IA
 
-Este script Python gera imagens baseadas nas letras de um arquivo de texto e as associa a um arquivo de áudio. As imagens geradas podem ser utilizadas para a criação de vídeos com letras ("_lyrics_"). O script utiliza a API da OpenAI para gerar as imagens e a biblioteca Pillow para manipulação de imagens.
+Este script Python gera imagens baseadas nas letras de um arquivo de texto e as associa a um arquivo de áudio. As imagens geradas podem ser utilizadas para a criação de vídeos com letras ("_lyrics_"). O script utiliza a API da OpenAI para gerar as imagens e a biblioteca Pillow para manipulação de imagens. [Veja um exemplo AQUI](https://www.youtube.com/watch?v=3oBkjyyJOtA).
 
 ## Características
 
