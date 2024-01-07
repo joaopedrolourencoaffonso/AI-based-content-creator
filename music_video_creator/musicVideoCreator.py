@@ -63,7 +63,7 @@ def gera_imagem(verso, client,filename,projeto):
 
         image_url = response.data[0].url
 
-        open(f".\\imagens\\{projeto}\\links.txt","a").write(f"{verso} - {image_url}")
+        open(f".\\imagens\\{projeto}\\links.txt","a").write(f"\n{verso} - {image_url}")
 
         download_and_save_image(image_url, filename, projeto);
 
